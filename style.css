@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --p-Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --bk-H-btn-Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--bk-H-btn-Very-light-gray);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+@media (max-width: 375px) {
+    .container {
+        margin: 20px 20px
+
+    }
+
+    .container .box1 {
+        border-top-right-radius: 3%;
+        border-bottom-left-radius: 0% !important;
+    }
+
+    .container .box3 {
+        border-top-right-radius: 0% !important;
+        border-bottom-left-radius: 3%;
+
+    }
+}
+
+.container .box {
+    padding: 64px;
+    position: relative;
+
+}
+
+.container .box p:nth-child(2) {
+    color: white;
+    font-size: 35px;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin: 30px 0px
+}
+
+.container .box p:nth-child(3) {
+    color: var(--p-Transparent-white);
+    line-height: 26px;
+    margin-bottom: 60px;
+}
+
+.container .box .btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--bk-H-btn-Very-light-gray);
+    padding: 13px 25px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.container .box .btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.container .box1 .btn {
+    color: var(--Bright-orange)
+}
+
+.container .box2 .btn {
+    color: var(--Dark-cyan);
+}
+
+.container .box3 .btn {
+    color: var(--Very-dark-cyan);
+}
+
+.container .box1 {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+}
+
+.container .box2 {
+    background-color: var(--Dark-cyan);
+}
+
+.container .box3 {
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
